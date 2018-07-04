@@ -1,5 +1,5 @@
 # p2p-filecoin
-YouTube link: https://youtu.be/vCZUwQ8xl_s
+YouTube link: https://youtu.be/w-ctiOvijcY
 
 ## Part A. IPFS and Proof of Storage
 
@@ -8,7 +8,7 @@ YouTube link: https://youtu.be/vCZUwQ8xl_s
 2. ipfs: https://ipfs.io/
 3. python3 socket packge
 
-make sure you add exacutive files "go" and "ipfs" to $PATH variable so you can execute them using command line
+make sure you add executive files "go" and "ipfs" to $PATH variable so you can execute them using command line
 
 ### Step 1: Setup a private network of IPFS
 refer to: https://medium.com/@chunyu.hsiao93/ipfs-private-network-%E7%A7%81%E6%9C%89%E7%B6%B2%E8%B7%AF-8d8748cba7b2
