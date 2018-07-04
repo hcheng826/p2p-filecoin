@@ -1,4 +1,5 @@
 # p2p-filecoin
+YouTube link: https://youtu.be/vCZUwQ8xl_s
 
 ## Part A. IPFS and Proof of Storage
 
@@ -108,3 +109,6 @@ get pin <data ipfs address>
 get nopin <data ipfs address>
 ```
 `pin/nopin` means a miner or just a client.
+
+## Work Division
+Please take a look at `WorkDivision.txt`
