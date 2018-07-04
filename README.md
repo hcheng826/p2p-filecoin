@@ -1,6 +1,6 @@
 # p2p-filecoin
 
-## IPFS and Proof of Storage
+## Part A. IPFS and Proof of Storage
 
 ### Prerequisites
 1. go: https://golang.org/dl/
@@ -32,3 +32,70 @@ Run
 python3 owner.py
 ```
 And you can see the output
+
+## Part B. Blockchain_pow
+
+### Prerequisites
+1. go: (like part A)
+2. boltdb: https://github.com/boltdb/bolt
+
+To start using Bolt, install Go and run `go get`:
+
+```sh
+$ go get github.com/boltdb/bolt/...
+```
+
+### Step 1: Compile this little project
+
+Just run `go build` to compile, and `./blockchain_pow` to generate the genesis block:
+
+```sh
+$ go build
+$ ./blockchain_pow
+```
+### step 2: addblock or print 
+
+There are two client cmd to use:
+```sh
+addblock -data BLOCK_DATA
+printchain
+```
+
+## Part C. Blockchain_p2pNet
+
+### Prerequisites
+1. go: (like part A)
+2. ipfs: (like part A)
+3. go-spew: https://github.com/davecgh/go-spew 
+4. go-ipfs-api: https://github.com/ipfs/go-ipfs-api
+5. go-libp2p: https://github.com/libp2p/go-libp2p
+
+install go-libp2p library might take more time than others,
+this library couldn't just run `go get`, but need to be `make`,
+there are more information in their github mentioned above.
+
+### Step 0: running the ipfs
+```sh
+ipfs daemon
+```
+
+### Step 1: running the first node
+To simplify this README tutorial, we just run this p2pNet in localhost:
+(add `-secio` to build a safe handshake tunnel for each other)
+```sh
+go run main.go -l 10001 -secio
+```
+
+### Step 2: running the second node
+```sh
+go run main.go -l 10002 -d <given address in the instructions> -secio
+```
+
+### Step 3: running the third node
+```sh
+go run main.go -l 10003 -d <given address in the instructions> -secio
+```
+
+### step n: ...
+All the same, you can add multiple nodes from different IP,
+but you need to modify the IP address in the < given address >
