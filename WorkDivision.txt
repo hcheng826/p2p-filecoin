@@ -1,0 +1,7 @@
+鄭閎、黃文璁、沈昶劭、陳秉珏
+b04901 {155, 060, 088, 087}
+分工：
+鄭閎：ipfs survey and implementation
+黃文璁：design the file verification mechanism
+沈昶劭：build the p2p network
+陳秉珏：design the blockchain
