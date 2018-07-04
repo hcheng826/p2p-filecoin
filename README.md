@@ -96,6 +96,15 @@ go run main.go -l 10002 -d <given address in the instructions> -secio
 go run main.go -l 10003 -d <given address in the instructions> -secio
 ```
 
-### step n: ...
+### Step n: ...
 All the same, you can add multiple nodes from different IP,
 but you need to modify the IP address in the < given address >
+
+### After running up all nodes: add data(owner) or get data(miner)
+There are 3 cmd:
+```sh
+add <your data>
+get pin <data ipfs address>
+get nopin <data ipfs address>
+```
+`pin/nopin` means a miner or just a client.
